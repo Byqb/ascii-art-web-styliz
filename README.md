@@ -39,7 +39,7 @@ The algorithm for generating ASCII art banners involves the following steps:
 4. Replace specific characters in the template with the user's text to generate the final ASCII art.
 5. Return the ASCII art as a response to the client.
 
-### In the website :
+### In the web:
 
 https://github.com/user-attachments/assets/82550a5d-e23f-46eb-b90c-e6d0997009c0
 
