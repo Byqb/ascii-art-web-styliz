@@ -14,7 +14,7 @@ import (
 var templates *template.Template
 
 func main() {
-	templates = template.Must(template.ParseGlob("templates/*"))
+	templates = template.Must(template.ParseGlob("index.html"))
 
 	style := http.FileServer(http.Dir("./fonts"))
 	http.Handle("/fonts/", http.StripPrefix("/fonts/", style))
@@ -35,7 +35,7 @@ func openBrowser(url string) {
 func gethandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 		if r.URL.Path != "/" {
-			file, err := os.Open("templates/error.html")
+			file, err := os.Open("error.html")
 			if err != nil {
 				http.Error(w, "An error occurred.", http.StatusInternalServerError)
 				return
